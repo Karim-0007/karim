@@ -219,15 +219,15 @@ function AllDone()
     }    
 )
    }}
+       
+    countClear()
     
+   allDoneBlack()
     localStorage.setItem( "tasks",JSON.stringify(data));
     
    
-    
-    countClear()
-    ShowData()
-   allDoneBlack()
-   
+ 
+
 
   
      
@@ -238,7 +238,7 @@ function AllDone()
 
 
 
-
+ShowData()
 
 function edit(i) {
     
