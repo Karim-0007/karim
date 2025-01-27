@@ -168,6 +168,7 @@ completedTasks.forEach((ele)=>
         {
             DEl.innerHTML = `Clear (${document.querySelectorAll(".true .icon-chacked").length}) Completed Items`;
         }
+        ShowData()
 
   }
   countClear()
@@ -201,8 +202,9 @@ function AllDone()
                        ele.completed = true;
                        localStorage.tasks = JSON.stringify(data)
      ShowData()
-                       
-            })
+   countClear()
+   allDoneBlack()
+    })
 
     }
     
@@ -211,6 +213,8 @@ function AllDone()
         ele.completed = false;
         localStorage.tasks = JSON.stringify(data)
      ShowData()
+   countClear()
+
         
     }    
 )
@@ -220,11 +224,9 @@ function AllDone()
     
    
     
-      
-      
-     ShowData()
-      countClear()
-    count()
+   
+    ShowData()
+  
      
     
       
@@ -260,9 +262,10 @@ function edit(i) {
                 localStorage.setItem("tasks",JSON.stringify(data));
                
             //    document.querySelector(".count").innerHTML = `(${i+1}) Left Item`
-                ShowData()
+                
                 ClearAll()
                 count()
+                ShowData()
             }
         })
 }
@@ -276,6 +279,7 @@ function Reload()
 {
     window.location.reload
 }
+
 
 count()
 countClear()
