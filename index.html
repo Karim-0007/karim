@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="To Do List for ES">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To do List</title>
+
+    <!-- css -->
+
+    <link rel="stylesheet" href="/css/To_Do_ListCss.css">
+    <link rel="stylesheet" href="/css/all.min.css">
+    <link rel="stylesheet" href="/css/normalize.css">
+
+    <!-- font -->
+
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" 
+rel="stylesheet"> -->
+
+
+    
+</head>
+<body>
+    
+<!-- header -->
+    <header> 
+        <h1>To Do List</h1>
+    </header>
+<!-- contant -->
+    <div id="container">
+        <div class="view">
+
+            <form action="">
+                <input class="TextInput"  type="text" placeholder="What Need To Do Done ?">
+            </form>
+
+            <!-- AllDone -->
+
+            <div class="AllDone" >
+                <a href="#" id="AllDone" onclick="AllDone()" ><i class="fa-solid fa-square-check"></i></a> <span>All Done</span>
+            </div>
+
+            <!-- List -->
+             <ul class="list">
+
+                <li class="task">
+
+                   <div ondblclick="edit(i)" class="taskItem">
+                            <a class="icon-chacked" href="#"><i class="fa-solid fa-check-to-slot"></i></a>
+                            <span> Take Some Coffe</span>
+                            <a class="icon-delete" href="#"><i class="fa-solid fa-circle-xmark"></i></i></a>
+                   </div>
+
+                </li>
+                <li class="task">
+
+                   <div class="taskItem">
+                            <a id="icon-chacked " onclick="Chacked(i)" href="#"><i class=" red fa-solid fa-check-to-slot"></i></a>
+                            <span> Take Some Coffe</span>
+                            <a class="icon-delete" onclick="Delete(i)" href="#"><i class="fa-solid fa-circle-xmark"></i></a>
+                   </div>
+
+                </li>
+               
+             </ul>
+
+             <!-- footer-contianter -->
+              <footer>
+                <div class="count">(0) Left Item </div>
+                <button id="clearAll" onclick="DeleteAll()"></button>
+              </footer>
+
+        </div>
+
+    </div>
+    <!-- footer -->
+    <footer id="footer">
+<div class="Detils">
+    <p>Double-click to edit a todo.</p>
+</div>
+<div class="Made">
+    <p>Created by :-</p>
+    <span>(Karim ayman)</span>
+</div>
+<div class="Reload">
+    <a onclick="reload()" class="Reload-a" href="#">Click here for optimized version</a>
+</div>
+
+    </footer>
+
+
+
+
+
+      <!-- js -->
+<script src="/js/To_Do_Listjs.js"></script>
+<script src="/js/all.min.js"></script>
+</body>
+</html>
+
+
+<!-- echo "# TODO" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin git@github.com:Karim-0007/TODO.git
+git push -u origin main -->
