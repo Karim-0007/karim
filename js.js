@@ -224,8 +224,11 @@ function AllDone()
     
    
     
-   
+    countClear()
     ShowData()
+   allDoneBlack()
+   
+
   
      
     
